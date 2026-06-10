@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>情緒繪本書單｜文化部中小學生讀物選介精選 80 本</title>
+<meta name="description" content="從文化部「中小學生讀物選介」第 42–47 次獲選書單中精選 80 本情緒主題繪本，依 10 大情緒主題分類，含適讀年齡與評審推薦，給家長的選書參考。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
+<style>
+:root{
+  --bg:#FBF7F0; --card:#FFFFFF; --ink:#4A3B2E; --ink2:#7A6A58; --line:#EBE2D4;
+  --accent:#E8924A;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;
+  font-size:16px; line-height:1.6}
+header{padding:28px 16px 8px; text-align:center; max-width:1100px; margin:0 auto}
+h1{font-size:1.7rem; margin:0 0 6px; letter-spacing:.05em}
+.sub{color:var(--ink2); font-size:.9rem; margin:0 0 4px}
+.intro{color:var(--ink2); font-size:.85rem; max-width:560px; margin:8px auto 0}
+.toolbar{position:sticky; top:0; z-index:10; background:rgba(251,247,240,.95); backdrop-filter:blur(6px);
+  padding:10px 12px; border-bottom:1px solid var(--line)}
+.toolbar-inner{max-width:1100px; margin:0 auto}
+.search{display:flex; align-items:center; gap:8px; background:var(--card); border:1.5px solid var(--line);
+  border-radius:24px; padding:8px 16px; margin-bottom:10px}
+.search input{flex:1; border:none; outline:none; font-size:1rem; background:transparent; color:var(--ink); min-width:0}
+.chips{display:flex; gap:6px; overflow-x:auto; padding-bottom:6px; scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto; border:1.5px solid var(--line); background:var(--card); color:var(--ink2);
+  border-radius:18px; padding:5px 13px; font-size:.85rem; cursor:pointer; white-space:nowrap; transition:.15s}
+.chip.on{color:#fff; border-color:transparent; background:var(--chipc,var(--accent)); font-weight:600}
+.count{max-width:1100px; margin:14px auto 0; padding:0 16px; color:var(--ink2); font-size:.85rem}
+.grid{max-width:1100px; margin:10px auto 40px; padding:0 16px;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:880px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card); border-radius:14px; overflow:hidden; border:1px solid var(--line);
+  cursor:pointer; display:flex; flex-direction:column; transition:transform .15s, box-shadow .15s}
+.card:hover{transform:translateY(-3px); box-shadow:0 8px 20px rgba(74,59,46,.12)}
+.cover{aspect-ratio:3/3.6; background:#F3EDE2; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative}
+.cover img{width:100%; height:100%; object-fit:contain}
+.cover .ph{font-size:2.6rem; font-weight:700; color:#fff; width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center; padding:16px; text-align:center; line-height:1.4}
+.tag{position:absolute; top:8px; left:8px; font-size:.7rem; color:#fff; padding:3px 9px;
+  border-radius:12px; background:var(--tagc,#999); font-weight:600; box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.body{padding:10px 12px 12px; display:flex; flex-direction:column; gap:6px; flex:1}
+.name{font-weight:700; font-size:.95rem; line-height:1.35}
+.ages{display:flex; flex-wrap:wrap; gap:4px}
+.age{font-size:.68rem; background:#F3EDE2; color:var(--ink2); border-radius:9px; padding:2px 7px}
+.note{font-size:.8rem; color:var(--ink2); line-height:1.45}
+.empty{text-align:center; color:var(--ink2); padding:60px 20px; grid-column:1/-1}
+/* modal */
+.overlay{position:fixed; inset:0; background:rgba(50,40,30,.55); z-index:50;
+  display:none; align-items:flex-end; justify-content:center}
+.overlay.show{display:flex}
+@media(min-width:680px){.overlay.show{align-items:center}}
+.modal{background:var(--card); width:100%; max-width:680px; max-height:88vh; overflow-y:auto;
+  border-radius:20px 20px 0 0; padding:20px; position:relative}
+@media(min-width:680px){.modal{border-radius:20px}}
+.modal .close{position:absolute; top:12px; right:12px; border:none; background:#F3EDE2;
+  width:34px; height:34px; border-radius:50%; font-size:1.05rem; cursor:pointer; color:var(--ink2)}
+.m-head{display:flex; gap:16px; margin-bottom:14px}
+.m-cover{flex:0 0 38%; max-width:220px; border-radius:10px; overflow:hidden; background:#F3EDE2; align-self:flex-start}
+.m-cover img{width:100%; display:block}
+.m-info{flex:1; min-width:0}
+.m-info h2{font-size:1.15rem; margin:2px 0 8px; line-height:1.4}
+.m-theme{display:inline-block; font-size:.78rem; color:#fff; padding:3px 11px; border-radius:13px;
+  background:var(--tagc,#999); font-weight:600; margin-bottom:8px}
+.m-meta{font-size:.8rem; color:var(--ink2); margin:2px 0}
+.m-sec{margin-top:12px}
+.m-sec h3{font-size:.85rem; color:var(--accent); margin:0 0 4px; letter-spacing:.08em}
+.m-sec p{margin:0; font-size:.9rem}
+footer{border-top:1px solid var(--line); padding:24px 16px 40px; text-align:center;
+  color:var(--ink2); font-size:.75rem; line-height:1.8}
+footer .src{max-width:640px; margin:0 auto}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌈 情緒繪本書單</h1>
+  <p class="sub">文化部「中小學生讀物選介」第 42–47 次獲選好書・情緒主題精選 80 本</p>
+  <p class="intro">從六屆共 1,060 本獲選圖畫書中，逐本閱讀簡介與評審推薦，挑出真正以「情緒」為主題的繪本。點選卡片可看完整介紹，歡迎按主題與孩子的年齡挑選。</p>
+</header>
+
+<div class="toolbar"><div class="toolbar-inner">
+  <div class="search">🔍<input id="q" type="search" placeholder="搜尋書名、作者或關鍵字…"></div>
+  <div class="chips" id="themeChips"></div>
+  <div class="chips" id="ageChips"></div>
+</div></div>
+
+<div class="count" id="count"></div>
+<main class="grid" id="grid"></main>
+
+<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+
+<footer><div class="src">
+  書目資料來源：文化部「中小學生讀物選介」第 42–47 次獲選書單（2020–2025）。<br>
+  書封圖片取自各網路書店、出版社官網與閱讀推廣網站，版權均屬原出版社所有，本頁僅供非營利閱讀推廣參考。<br>
+  若您是版權方且希望調整圖片使用，請與我們聯繫，將立即處理。
+</div></footer>
+
+<script src="books.js"></script>
+<script>
+const THEMES = [...new Set(BOOKS.map(b=>b.g))];
+const AGES = ['學齡前','小學低年級','小學中年級','小學高年級','國中','高中職'];
+const COLOR = {'🌈':'#4CAF7D','😤':'#E2574C','😨':'#8E6FC1','😰':'#E8924A','💧':'#5B8DBE','😒':'#C9A132','🌙':'#7A8B99','😳':'#D87FA0','🗣':'#A47C5B','🏠':'#6BA8A0'};
+const colorOf = g => COLOR[[...g][0]] || '#999';
+const shortOf = g => g.replace(/（.*?）/,'');
+
+let fTheme = null, fAge = null, fQ = '';
+
+function chip(label, color, on, cb){
+  const el = document.createElement('button');
+  el.className = 'chip' + (on ? ' on' : '');
+  el.textContent = label;
+  el.style.setProperty('--chipc', color);
+  el.onclick = cb;
+  return el;
+}
+function renderChips(){
+  const tc = document.getElementById('themeChips'); tc.innerHTML='';
+  tc.appendChild(chip('全部主題','#A47C5B', fTheme===null, ()=>{fTheme=null; render();}));
+  THEMES.forEach(t=>tc.appendChild(chip(shortOf(t), colorOf(t), fTheme===t, ()=>{fTheme=(fTheme===t?null:t); render();})));
+  const ac = document.getElementById('ageChips'); ac.innerHTML='';
+  ac.appendChild(chip('全部年齡','#A47C5B', fAge===null, ()=>{fAge=null; render();}));
+  AGES.forEach(a=>ac.appendChild(chip(a,'#8E6FC1', fAge===a, ()=>{fAge=(fAge===a?null:a); render();})));
+}
+function match(b){
+  if(fTheme && b.g!==fTheme) return false;
+  if(fAge && !b.a.includes(fAge)) return false;
+  if(fQ){
+    const hay = (b.n + b.au + b.pu + b.note + b.rec).toLowerCase();
+    if(!hay.includes(fQ)) return false;
+  }
+  return true;
+}
+function render(){
+  renderChips();
+  const grid = document.getElementById('grid'); grid.innerHTML='';
+  const list = BOOKS.filter(match);
+  document.getElementById('count').textContent = `顯示 ${list.length} / ${BOOKS.length} 本`;
+  if(!list.length){ grid.innerHTML = '<div class="empty">沒有符合的繪本，換個條件試試 🙂</div>'; return; }
+  list.forEach(b=>{
+    const c = document.createElement('div'); c.className='card';
+    const coverHtml = b.c
+      ? `<img loading="lazy" src="covers/${b.c}" alt="${b.n} 封面">`
+      : `<div class="ph" style="background:${colorOf(b.g)}">${b.n.slice(0,6)}</div>`;
+    c.innerHTML = `
+      <div class="cover" style="--tagc:${colorOf(b.g)}">${coverHtml}<span class="tag">${shortOf(b.g)}</span></div>
+      <div class="body">
+        <div class="name">${b.n}</div>
+        <div class="ages">${b.a.map(a=>`<span class="age">${a}</span>`).join('')}</div>
+        <div class="note">${b.note}</div>
+      </div>`;
+    c.onclick = ()=>openModal(b);
+    grid.appendChild(c);
+  });
+}
+function openModal(b){
+  const m = document.getElementById('modal');
+  const coverHtml = b.c
+    ? `<img src="covers/${b.c}" alt="${b.n} 封面">`
+    : `<div class="ph" style="background:${colorOf(b.g)};aspect-ratio:3/3.6;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;padding:14px;text-align:center">${b.n.slice(0,8)}</div>`;
+  m.innerHTML = `
+    <button class="close" onclick="closeModal()">✕</button>
+    <div class="m-head">
+      <div class="m-cover">${coverHtml}</div>
+      <div class="m-info">
+        <span class="m-theme" style="--tagc:${colorOf(b.g)}">${b.g}</span>
+        <h2>${b.n}</h2>
+        <p class="m-meta">✍️ ${b.au || '—'}</p>
+        <p class="m-meta">🏠 ${b.pu}｜${b.ed}入選</p>
+        <p class="m-meta">👧 適讀：${b.a.join('、')}</p>
+      </div>
+    </div>
+    <div class="m-sec"><h3>📖 這本書在談</h3><p>${b.note}</p></div>
+    <div class="m-sec"><h3>⭐ 評審推薦</h3><p>${b.rec}</p></div>`;
+  document.getElementById('overlay').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('overlay').classList.remove('show');
+  document.body.style.overflow='';
+}
+document.getElementById('overlay').onclick = e=>{ if(e.target.id==='overlay') closeModal(); };
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+document.getElementById('q').oninput = e=>{ fQ = e.target.value.trim().toLowerCase(); render(); };
+render();
+</script>
+</body>
+</html>
