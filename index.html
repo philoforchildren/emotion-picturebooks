@@ -111,8 +111,9 @@ footer .src{max-width:640px; margin:0 auto}
   若您是版權方且希望調整圖片使用，請與我們聯繫，將立即處理。
 </div></footer>
 
-<script src="books.js"></script>
+<script src="books.js?v=20260710b"></script>
 <script>
+const V = '?v=20260710b';   // 資源版本號（破瀏覽器快取）
 const THEMES = [...new Set(BOOKS.map(b=>b.g))];
 const AGES = ['學齡前','小學低年級','小學中年級','小學高年級','國中','高中職'];
 const COLOR = {
@@ -200,7 +201,7 @@ function render(){
     const t = tagOf(b);
     const c = document.createElement('div'); c.className='card';
     const coverHtml = b.c
-      ? `<img loading="lazy" src="covers/${b.c}" alt="${b.n} 封面">`
+      ? `<img loading="lazy" src="covers/${b.c}${V}" alt="${b.n} 封面">`
       : `<div class="ph" style="background:${t.color}">${b.n.slice(0,6)}</div>`;
     c.innerHTML = `
       <div class="cover" style="--tagc:${t.color}">${coverHtml}<span class="tag">${t.label}</span></div>
@@ -217,7 +218,7 @@ function openModal(b){
   const m = document.getElementById('modal');
   const sel = selOf(b.s);
   const coverHtml = b.c
-    ? `<img src="covers/${b.c}" alt="${b.n} 封面">`
+    ? `<img src="covers/${b.c}${V}" alt="${b.n} 封面">`
     : `<div class="ph" style="background:${colorOf(b.g)}">${b.n.slice(0,8)}</div>`;
   const selBadge = sel ? `<span class="m-theme" style="--tagc:${sel.c}">🧭 SEL ${sel.l}</span>` : '';
   m.innerHTML = `
