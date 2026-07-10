@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>情緒繪本書單｜文化部中小學生讀物選介精選 80 本</title>
-<meta name="description" content="從文化部「中小學生讀物選介」第 42–47 次獲選書單中精選 80 本情緒主題繪本，依 10 大情緒主題分類，含適讀年齡與評審推薦，給家長的選書參考。">
+<title>情緒繪本書單｜文化部中小學生讀物選介精選 100 本・含 SEL 分類</title>
+<meta name="description" content="從文化部「中小學生讀物選介」第 42–47 次獲選書單中精選 100 本 SEL（社會情緒學習）繪本，可依情緒主題或 SEL 五大能力（自我覺察、自我管理、社會覺察、人際技巧、負責任的決定）分類，含適讀年齡與評審推薦，給家長與老師的選書參考。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
 <style>
 :root{
@@ -18,19 +18,25 @@ body{margin:0; background:var(--bg); color:var(--ink);
 header{padding:28px 16px 8px; text-align:center; max-width:1100px; margin:0 auto}
 h1{font-size:1.7rem; margin:0 0 6px; letter-spacing:.05em}
 .sub{color:var(--ink2); font-size:.9rem; margin:0 0 4px}
-.intro{color:var(--ink2); font-size:.85rem; max-width:560px; margin:8px auto 0}
+.intro{color:var(--ink2); font-size:.85rem; max-width:580px; margin:8px auto 0}
 .toolbar{position:sticky; top:0; z-index:10; background:rgba(251,247,240,.95); backdrop-filter:blur(6px);
   padding:10px 12px; border-bottom:1px solid var(--line)}
 .toolbar-inner{max-width:1100px; margin:0 auto}
 .search{display:flex; align-items:center; gap:8px; background:var(--card); border:1.5px solid var(--line);
   border-radius:24px; padding:8px 16px; margin-bottom:10px}
 .search input{flex:1; border:none; outline:none; font-size:1rem; background:transparent; color:var(--ink); min-width:0}
+.modes{display:flex; gap:8px; margin-bottom:10px; justify-content:center}
+.modebtn{border:1.5px solid var(--line); background:var(--card); color:var(--ink2);
+  border-radius:20px; padding:7px 16px; font-size:.9rem; cursor:pointer; font-weight:600; transition:.15s}
+.modebtn.on{background:var(--ink); color:#fff; border-color:var(--ink)}
 .chips{display:flex; gap:6px; overflow-x:auto; padding-bottom:6px; scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex:0 0 auto; border:1.5px solid var(--line); background:var(--card); color:var(--ink2);
   border-radius:18px; padding:5px 13px; font-size:.85rem; cursor:pointer; white-space:nowrap; transition:.15s}
 .chip.on{color:#fff; border-color:transparent; background:var(--chipc,var(--accent)); font-weight:600}
 .count{max-width:1100px; margin:14px auto 0; padding:0 16px; color:var(--ink2); font-size:.85rem}
+.hint{max-width:1100px; margin:6px auto 0; padding:0 16px; color:var(--ink2); font-size:.82rem; line-height:1.5}
+.hint b{color:var(--ink)}
 .grid{max-width:1100px; margin:10px auto 40px; padding:0 16px;
   display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
 @media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -63,10 +69,12 @@ h1{font-size:1.7rem; margin:0 0 6px; letter-spacing:.05em}
 .m-head{display:flex; gap:16px; margin-bottom:14px}
 .m-cover{flex:0 0 38%; max-width:220px; border-radius:10px; overflow:hidden; background:#F3EDE2; align-self:flex-start}
 .m-cover img{width:100%; display:block}
+.m-cover .ph{aspect-ratio:3/3.6; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; padding:14px; text-align:center}
 .m-info{flex:1; min-width:0}
 .m-info h2{font-size:1.15rem; margin:2px 0 8px; line-height:1.4}
+.m-badges{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px}
 .m-theme{display:inline-block; font-size:.78rem; color:#fff; padding:3px 11px; border-radius:13px;
-  background:var(--tagc,#999); font-weight:600; margin-bottom:8px}
+  background:var(--tagc,#999); font-weight:600}
 .m-meta{font-size:.8rem; color:var(--ink2); margin:2px 0}
 .m-sec{margin-top:12px}
 .m-sec h3{font-size:.85rem; color:var(--accent); margin:0 0 4px; letter-spacing:.08em}
@@ -79,23 +87,26 @@ footer .src{max-width:640px; margin:0 auto}
 <body>
 <header>
   <h1>🌈 情緒繪本書單</h1>
-  <p class="sub">文化部「中小學生讀物選介」第 42–47 次獲選好書・情緒主題精選 80 本</p>
-  <p class="intro">從六屆共 1,060 本獲選圖畫書中，逐本閱讀簡介與評審推薦，挑出真正以「情緒」為主題的繪本。點選卡片可看完整介紹，歡迎按主題與孩子的年齡挑選。</p>
+  <p class="sub">文化部「中小學生讀物選介」第 42–47 次獲選好書・精選 100 本</p>
+  <p class="intro">從六屆共 1,060 本獲選圖畫書中，挑出以「情緒」與「人際・同理」為主題的繪本。可切換<b>依情緒主題</b>或<b>依 SEL 社會情緒學習能力</b>瀏覽，點卡片看完整介紹，按主題與孩子的年齡挑選。</p>
 </header>
 
 <div class="toolbar"><div class="toolbar-inner">
   <div class="search">🔍<input id="q" type="search" placeholder="搜尋書名、作者或關鍵字…"></div>
+  <div class="modes" id="modeToggle"></div>
   <div class="chips" id="themeChips"></div>
   <div class="chips" id="ageChips"></div>
 </div></div>
 
 <div class="count" id="count"></div>
+<div class="hint" id="hint"></div>
 <main class="grid" id="grid"></main>
 
 <div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
 
 <footer><div class="src">
   書目資料來源：文化部「中小學生讀物選介」第 42–47 次獲選書單（2020–2025）。<br>
+  SEL 五大能力架構參考 CASEL（Collaborative for Academic, Social, and Emotional Learning）。<br>
   書封圖片取自各網路書店、出版社官網與閱讀推廣網站，版權均屬原出版社所有，本頁僅供非營利閱讀推廣參考。<br>
   若您是版權方且希望調整圖片使用，請與我們聯繫，將立即處理。
 </div></footer>
@@ -104,11 +115,28 @@ footer .src{max-width:640px; margin:0 auto}
 <script>
 const THEMES = [...new Set(BOOKS.map(b=>b.g))];
 const AGES = ['學齡前','小學低年級','小學中年級','小學高年級','國中','高中職'];
-const COLOR = {'🌈':'#4CAF7D','😤':'#E2574C','😨':'#8E6FC1','😰':'#E8924A','💧':'#5B8DBE','😒':'#C9A132','🌙':'#7A8B99','😳':'#D87FA0','🗣':'#A47C5B','🏠':'#6BA8A0'};
+const COLOR = {
+  '🌈':'#4CAF7D','😤':'#E2574C','😨':'#8E6FC1','😰':'#E8924A','💧':'#5B8DBE',
+  '😒':'#C9A132','🌙':'#7A8B99','😳':'#D87FA0','🗣':'#A47C5B','🏠':'#6BA8A0',
+  '💞':'#E86A9C','🌍':'#3FA98C','🤝':'#4E86C7','🫂':'#C96A4E','🕊':'#7A9E5B','🙌':'#B58A3E'
+};
+const SEL = [
+  {n:1, l:'1 自我覺察', d:'認得出、叫得出自己的情緒', c:'#4CAF7D'},
+  {n:2, l:'2 自我管理', d:'情緒來了能穩住、能調節', c:'#E8924A'},
+  {n:3, l:'3 社會覺察', d:'讀懂別人、同理與換位思考', c:'#5B8DBE'},
+  {n:4, l:'4 人際技巧', d:'交朋友、合作、和好、求助', c:'#E2574C'},
+];
+const selOf = s => SEL.find(x=>x.n===s) || null;
 const colorOf = g => COLOR[[...g][0]] || '#999';
 const shortOf = g => g.replace(/（.*?）/,'');
+function tagOf(b){
+  return mode==='sel'
+    ? {label:(selOf(b.s)?.l || '—'), color:(selOf(b.s)?.c || '#999')}
+    : {label:shortOf(b.g), color:colorOf(b.g)};
+}
 
-let fTheme = null, fAge = null, fQ = '';
+let mode = 'theme';            // 'theme' | 'sel'
+let fTheme = null, fAge = null, fSel = null, fQ = '';
 
 function chip(label, color, on, cb){
   const el = document.createElement('button');
@@ -118,16 +146,32 @@ function chip(label, color, on, cb){
   el.onclick = cb;
   return el;
 }
+function renderModeToggle(){
+  const el = document.getElementById('modeToggle'); el.innerHTML='';
+  [['theme','🎨 依情緒主題'],['sel','🧭 依 SEL 能力']].forEach(([m,label])=>{
+    const b = document.createElement('button');
+    b.className = 'modebtn' + (mode===m ? ' on' : '');
+    b.textContent = label;
+    b.onclick = ()=>{ if(mode!==m){ mode=m; fTheme=null; fSel=null; render(); } };
+    el.appendChild(b);
+  });
+}
 function renderChips(){
   const tc = document.getElementById('themeChips'); tc.innerHTML='';
-  tc.appendChild(chip('全部主題','#A47C5B', fTheme===null, ()=>{fTheme=null; render();}));
-  THEMES.forEach(t=>tc.appendChild(chip(shortOf(t), colorOf(t), fTheme===t, ()=>{fTheme=(fTheme===t?null:t); render();})));
+  if(mode==='sel'){
+    tc.appendChild(chip('全部能力','#A47C5B', fSel===null, ()=>{fSel=null; render();}));
+    SEL.forEach(x=>tc.appendChild(chip(x.l, x.c, fSel===x.n, ()=>{fSel=(fSel===x.n?null:x.n); render();})));
+  } else {
+    tc.appendChild(chip('全部主題','#A47C5B', fTheme===null, ()=>{fTheme=null; render();}));
+    THEMES.forEach(t=>tc.appendChild(chip(shortOf(t), colorOf(t), fTheme===t, ()=>{fTheme=(fTheme===t?null:t); render();})));
+  }
   const ac = document.getElementById('ageChips'); ac.innerHTML='';
   ac.appendChild(chip('全部年齡','#A47C5B', fAge===null, ()=>{fAge=null; render();}));
   AGES.forEach(a=>ac.appendChild(chip(a,'#8E6FC1', fAge===a, ()=>{fAge=(fAge===a?null:a); render();})));
 }
 function match(b){
-  if(fTheme && b.g!==fTheme) return false;
+  if(mode==='sel'){ if(fSel && b.s!==fSel) return false; }
+  else { if(fTheme && b.g!==fTheme) return false; }
   if(fAge && !b.a.includes(fAge)) return false;
   if(fQ){
     const hay = (b.n + b.au + b.pu + b.note + b.rec).toLowerCase();
@@ -135,19 +179,31 @@ function match(b){
   }
   return true;
 }
+function setHint(){
+  const h = document.getElementById('hint');
+  if(mode==='sel'){
+    if(fSel){ const x=selOf(fSel); h.innerHTML = `<b>${x.l}</b>：${x.d}`; }
+    else h.innerHTML = 'SEL＝社會情緒學習。點上方任一能力，看對應的繪本；也可搭配右方年齡篩選。';
+  } else { h.innerHTML=''; }
+}
 function render(){
+  renderModeToggle();
   renderChips();
+  setHint();
   const grid = document.getElementById('grid'); grid.innerHTML='';
   const list = BOOKS.filter(match);
   document.getElementById('count').textContent = `顯示 ${list.length} / ${BOOKS.length} 本`;
-  if(!list.length){ grid.innerHTML = '<div class="empty">沒有符合的繪本，換個條件試試 🙂</div>'; return; }
+  if(!list.length){
+    grid.innerHTML = '<div class="empty">沒有符合的繪本，換個條件試試 🙂</div>'; return;
+  }
   list.forEach(b=>{
+    const t = tagOf(b);
     const c = document.createElement('div'); c.className='card';
     const coverHtml = b.c
       ? `<img loading="lazy" src="covers/${b.c}" alt="${b.n} 封面">`
-      : `<div class="ph" style="background:${colorOf(b.g)}">${b.n.slice(0,6)}</div>`;
+      : `<div class="ph" style="background:${t.color}">${b.n.slice(0,6)}</div>`;
     c.innerHTML = `
-      <div class="cover" style="--tagc:${colorOf(b.g)}">${coverHtml}<span class="tag">${shortOf(b.g)}</span></div>
+      <div class="cover" style="--tagc:${t.color}">${coverHtml}<span class="tag">${t.label}</span></div>
       <div class="body">
         <div class="name">${b.n}</div>
         <div class="ages">${b.a.map(a=>`<span class="age">${a}</span>`).join('')}</div>
@@ -159,15 +215,20 @@ function render(){
 }
 function openModal(b){
   const m = document.getElementById('modal');
+  const sel = selOf(b.s);
   const coverHtml = b.c
     ? `<img src="covers/${b.c}" alt="${b.n} 封面">`
-    : `<div class="ph" style="background:${colorOf(b.g)};aspect-ratio:3/3.6;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;padding:14px;text-align:center">${b.n.slice(0,8)}</div>`;
+    : `<div class="ph" style="background:${colorOf(b.g)}">${b.n.slice(0,8)}</div>`;
+  const selBadge = sel ? `<span class="m-theme" style="--tagc:${sel.c}">🧭 SEL ${sel.l}</span>` : '';
   m.innerHTML = `
     <button class="close" onclick="closeModal()">✕</button>
     <div class="m-head">
       <div class="m-cover">${coverHtml}</div>
       <div class="m-info">
-        <span class="m-theme" style="--tagc:${colorOf(b.g)}">${b.g}</span>
+        <div class="m-badges">
+          <span class="m-theme" style="--tagc:${colorOf(b.g)}">${b.g}</span>
+          ${selBadge}
+        </div>
         <h2>${b.n}</h2>
         <p class="m-meta">✍️ ${b.au || '—'}</p>
         <p class="m-meta">🏠 ${b.pu}｜${b.ed}入選</p>
